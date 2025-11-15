@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configure Tailwind CSS to use the 'class' strategy for dark mode.
+      // This allows us to toggle dark mode programmatically by adding/removing the 'dark' class
+      // from the <html> element, which is what the React component does.
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @keyframes value-update {
+        from {
+          opacity: 0.5;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-value-update {
+        animation: value-update 0.15s ease-out;
+      }
+      @keyframes history-fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .animate-history-fade-in {
+        animation: history-fade-in 0.2s ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

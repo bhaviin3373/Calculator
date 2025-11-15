@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Calculator",
+  "description": "A stylish and interactive calculator built with React and Tailwind CSS, providing a seamless user experience for basic arithmetic operations.",
+  "requestFramePermissions": []
+}
